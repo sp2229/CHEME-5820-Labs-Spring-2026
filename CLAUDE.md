@@ -60,6 +60,7 @@ Generate three components:
 - Ensure mathematical notation and code examples follow established patterns
 - Use direct, simple, and concise language
 - Avoid unnecessary adjectives
+- **Do not use equations in Learning Objectives or Key Takeaways** - use conceptual descriptions instead
 
 **Bullet Point Guidelines:**
 - When using bullet points, use conversational style matching the Learning Objectives format
