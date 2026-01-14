@@ -81,11 +81,13 @@ Check all mathematical notation for consistency and precision:
 - Check that transpose notation is consistent (choose one style and use throughout)
 - Verify superscript/subscript conventions are applied uniformly
 
-**Blockquote Organization:**
+**Blockquote Organization and Flow:**
 - Never have multiple consecutive blockquotes without connective text between them
 - Add at least one sentence of regular text between blockquotes to provide context and flow
 - Blockquotes should be self-contained explanatory sections, not fragmented pieces
 - When presenting multi-step processes, consider using a single blockquote with internal structure rather than multiple separate blockquotes
+- **CRITICAL: Never flow blockquotes directly into code cells** - always add a transition sentence between blockquote and code
+- **CRITICAL: Never have multiple blockquote sections within the same markdown cell without text between them** - merge into one blockquote or add transition text
 
 **LaTeX Rendering Verification:**
 - All LaTeX equations must be syntactically correct and render properly
