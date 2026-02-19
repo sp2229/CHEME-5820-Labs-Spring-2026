@@ -30,6 +30,7 @@ Generate three components:
 - Create three specific, actionable learning objectives
 - Use format: `* __[Objective title]:__ [description]`
 - Each should be concrete and measurable
+- Each objective must be exactly two sentences
 - **Important**: Check the notebook for specific instructions or placeholders in the learning objectives section - the user may specify exactly what should go in each objective
 - Only use direct, simple, and concise language
 - Avoid adjectives
@@ -42,7 +43,7 @@ Generate three components:
   ```
   * **[Takeaway title]:** [explanation]
   ```
-- Each takeaway should be concise (1-2 sentences)
+- Each takeaway must be exactly two sentences
 - **Important**: Check the notebook for specific instructions or placeholders in the summary section - the user may specify exactly what should go in each takeaway
 - Only use direct, simple, and concise language
 - Avoid adjectives
@@ -67,8 +68,8 @@ Generate three components:
 - Format: `* __[Title]:__ [concise description]`
 - Each bullet should be focused and scannable
 - Prefer conversational bullet points over long prose paragraphs when listing key points
-- Keep each bullet to 1-2 sentences maximum
-- Example (from Learning Objectives): `* __Understand RNN architecture and memory mechanisms:__ Explain how RNNs maintain hidden states...`
+- For Learning Objectives and Key Takeaways, use exactly two sentences per bullet
+- Example (from Learning Objectives): `* __Understand RNN architecture and memory mechanisms:__ Explain how RNNs maintain hidden states across time steps. Describe how this memory influences sequence prediction outcomes.`
 
 ### Step 4: Mathematical Notation Review
 Check all mathematical notation for consistency and precision:
