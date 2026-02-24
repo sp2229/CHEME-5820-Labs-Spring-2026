@@ -1,0 +1,21 @@
+#= 
+
+hebbian learning --> does not work well for correlated samples 
+ 
+pseudo ivnerse learning rules --> better 
+
+
+
+Compare the correlation structure of `C₁` (digit memories) and `C₀` (lecture uncorrelated memories). Which matrix has the larger off-diagonal magnitude, and what does that imply about expected interference and recall reliability in a classical Hopfield network? 
+
+If the `C₁` magnitude is much larger, would you expect the practical memory limit to be closer to or lower than the $K_{max}=0.138N$ rule-of-thumb, and why?
+
+
+If the c1 magnitude is moch larger, i would expect the practical memory limit to be closer to or lower than Kmax because when memories are correlated, an additional memory minimum is created and makes it more difficult to find the true memory 
+
+pseudo inverse learning improves 
+weighting scheme allows us to work with correlated real world images 
+
+
+
+=#
