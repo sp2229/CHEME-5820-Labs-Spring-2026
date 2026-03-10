@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3:*)",
+      "Bash(git add:*)",
+      "Bash(source /Users/jeffreyvarner/Desktop/julia_work/CHEME-5820-instances/Spring-2026/CHEME-5820-Labs-Spring-2026/.venv/bin/activate && echo \"Virtual environment activated successfully\")"
+    ]
+  }
+}
