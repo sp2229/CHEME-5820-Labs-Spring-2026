@@ -8,25 +8,38 @@ Entry `[i, j]` is the count of token `j` in sentence `i`. Each sentence is
 lowercased, split on whitespace, and wrapped with `<bos>` and `<eos>` tokens
 before counting. Unknown tokens are mapped to `<unk>` if present in `vocabulary`.
 
-# Arguments
+### Arguments
 - `sentences::Array{String,1}`: raw sentences.
 - `vocabulary::Dict{String,Int64}`: mapping from token to 1-based vocabulary index.
+
+### Returns
+- `::Array{Int64,2}`: count matrix of size `num_sentences × vocab_size`.
 """
 function build_bow_matrix(sentences::Array{String,1}, vocabulary::Dict{String,Int64})::Array{Int64,2}
-    num_sentences = length(sentences)
-    vocab_size = length(vocabulary)
-    bow_matrix = zeros(Int64, num_sentences, vocab_size)
+
+    # initialize -
+    num_sentences = length(sentences);
+    vocab_size = length(vocabulary);
+    bow_matrix = zeros(Int64, num_sentences, vocab_size);
+
+    # main loop: count tokens in each sentence -
     for (i, sentence) in enumerate(sentences)
-        words = split(lowercase(sentence))
-        augmented = ["<bos>"; words; "<eos>"]
+
+        # tokenize, lowercase, and add boundary tokens -
+        words = split(lowercase(sentence));
+        augmented = ["<bos>"; words; "<eos>"];
+
+        # accumulate counts -
         for word in augmented
-            idx = get(vocabulary, word, get(vocabulary, "<unk>", 0))
+            idx = get(vocabulary, word, get(vocabulary, "<unk>", 0));
             if idx > 0
-                bow_matrix[i, idx] += 1
+                bow_matrix[i, idx] += 1;
             end
         end
     end
-    return bow_matrix
+
+    # return -
+    return bow_matrix;
 end
 
 """
@@ -38,15 +51,24 @@ Each feature string is hashed and mapped to an index in `[1, length]` via `mod1(
 The value at each index is the number of features that hash to that index.
 Collisions (multiple features mapping to the same index) are summed.
 
-# Arguments
+### Arguments
 - `features::Array{String,1}`: list of feature strings to vectorize.
 - `length::Int64`: output vector length (default: 10).
+
+### Returns
+- `::Array{Int64,1}`: count vector of size `length`.
 """
 function hashing_vectorizer(features::Array{String,1}; length::Int64=10)::Array{Int64,1}
-    v = zeros(Int64, length)
+
+    # initialize -
+    v = zeros(Int64, length);
+
+    # hash each feature and accumulate counts -
     for f in features
-        idx = mod1(abs(hash(f)), length)
-        v[idx] += 1
+        idx = mod1(abs(hash(f)), length);
+        v[idx] += 1;
     end
-    return v
+
+    # return -
+    return v;
 end
