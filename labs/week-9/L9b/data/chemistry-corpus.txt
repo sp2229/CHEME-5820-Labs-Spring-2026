@@ -646,3 +646,128 @@ the rate-limiting step of the Haber process is the dissociative adsorption of ni
 the reaction rate in the Haber process increases with pressure because higher pressure increases the frequency of molecular collisions on the catalyst surface
 at equilibrium the rate of ammonia formation equals the rate of ammonia decomposition
 removing ammonia from the equilibrium mixture by condensation shifts the equilibrium toward further production
+
+oxidation loses electrons just as an acid loses a proton during a reaction
+reduction gains electrons just as a base gains a proton during a reaction
+an acid donates a proton and oxidation donates electrons in their respective reactions
+a base accepts a proton and reduction accepts electrons in their respective reactions
+oxidation is to reduction as acid is to base because both pairs involve complementary transfer processes
+just as an acid donates a proton to a base oxidation donates electrons that drive reduction
+just as a base accepts a proton from an acid reduction accepts electrons from an oxidizing agent
+acid and oxidation are both donor processes in complementary chemical reaction pairs
+base and reduction are both acceptor processes in complementary chemical reaction pairs
+in acid base chemistry acid is the donor and in redox chemistry oxidation is the electron loss process
+in acid base chemistry base is the acceptor and in redox chemistry reduction is the electron gain process
+an acid loses its proton in the same way that oxidation involves losing electrons
+a base gains a proton in the same way that reduction involves gaining electrons
+the relationship between acid and base mirrors the relationship between oxidation and reduction
+just as an acid cannot donate a proton without a base to accept it oxidation cannot occur without reduction
+the proton transferred in acid base reactions plays the same role as electrons transferred in redox reactions
+acids donate protons and oxidation involves donating electrons to drive chemical reactions forward
+bases accept protons and reduction involves accepting electrons during chemical reactions
+acid and oxidation both involve releasing a charged particle to a partner species
+base and reduction both involve receiving a charged particle from a partner species
+an acid is identified by proton donation just as oxidation is identified by electron loss
+a base is identified by proton acceptance just as reduction is identified by electron gain
+the driving force of acid base reactions is proton transfer just as the driving force of redox reactions is electron transfer
+in a neutralization reaction acid donates a proton to base just as in a redox reaction the oxidized species donates electrons to the reduced species
+strong acids readily donate protons just as strong oxidizing agents readily cause oxidation by losing electrons
+strong bases readily accept protons just as strong reducing agents readily cause reduction by gaining electrons
+an acid is the proton donor in acid base chemistry just as oxidation is the electron donor process in redox chemistry
+a base is the proton acceptor in acid base chemistry just as reduction is the electron acceptor process in redox chemistry
+an acid donates a proton to its partner just as oxidation releases electrons to its partner in a redox pair
+
+an acid is defined by its ability to donate a proton to another species
+reduction is defined by the gain of electrons by a species during a reaction
+the characteristic particle of an acid is the proton it donates
+the characteristic particle of reduction is the electrons that are gained
+protons define the chemical behavior of acids in solution
+electrons define the chemical behavior of reduction in redox reactions
+an acid releases a proton during a chemical reaction with a base
+reduction involves gaining electrons during a chemical reaction with an oxidizing agent
+the proton is the key particle donated by an acid to a base
+electrons are the key particles gained by a species undergoing reduction
+acid chemistry is centered on proton transfer just as reduction is centered on electron gain
+an acid without a proton to donate cannot function as an acid
+reduction cannot occur without electrons being transferred to the reduced species
+the number of protons an acid donates determines its strength in solution
+the number of electrons gained determines the extent of reduction in a redox reaction
+a strong acid readily donates its proton to a base
+a strong reduction process readily gains electrons from an oxidizing agent
+protons released by acids drive acid base reactions forward
+electrons gained in reduction drive redox reactions forward
+identifying an acid requires identifying the proton donor in a reaction
+identifying reduction requires identifying the electron acceptor in a reaction
+an acid is a proton donor just as reduction is an electron acceptor process
+the proton of an acid is transferred to a base during neutralization
+electrons in reduction are transferred from an oxidizing agent to the species being reduced
+acid strength increases with greater proton donation tendency just as reduction potential increases with greater electron gain tendency
+
+melting is the phase transition of solid to liquid
+boiling is the phase transition of liquid to gas
+a solid undergoes melting when heated to its melting point
+a liquid undergoes boiling when heated to its boiling point
+melting requires the solid to absorb enough energy to overcome its rigid structure
+boiling requires the liquid to absorb enough energy to overcome its intermolecular forces
+the solid phase is converted to liquid by melting at the melting point
+the liquid phase is converted to gas by boiling at the boiling point
+solid and melting are connected because melting is the process that transforms solid into liquid
+liquid and boiling are connected because boiling is the process that transforms liquid into gas
+melting is associated with solid just as boiling is associated with liquid
+the solid becomes liquid through melting just as the liquid becomes gas through boiling
+a solid melts to become liquid just as a liquid boils to become gas
+melting transforms solid and boiling transforms liquid during phase transitions
+the melting process involves solid particles breaking free of fixed positions
+the boiling process involves liquid particles breaking free of intermolecular forces
+solid is the starting phase in melting just as liquid is the starting phase in boiling
+the solid to liquid transition is called melting and the liquid to gas transition is called boiling
+solid converts to liquid by melting and liquid converts to gas by boiling
+heating a solid causes melting just as heating a liquid causes boiling
+
+acid is the complement of base just as oxidation is the complement of reduction
+base is the complement of acid just as reduction is the complement of oxidation
+acid and base are a complementary pair just as oxidation and reduction are a complementary pair
+the pair acid and base is analogous to the pair oxidation and reduction
+where there is acid there is base just as where there is oxidation there is reduction
+acid reacts with base just as oxidation occurs alongside reduction
+base is the chemical partner of acid just as reduction is the chemical partner of oxidation
+acid is paired with base in neutralization just as oxidation is paired with reduction in redox reactions
+acid cannot occur without base just as oxidation cannot occur without reduction
+base neutralizes acid just as reduction balances oxidation in a redox reaction
+the opposite of acid behavior is base behavior just as the opposite of oxidation is reduction
+acid and oxidation are on one side of a reaction just as base and reduction are on the other side
+acid combines with base just as oxidation combines with reduction in every reaction
+the complementary process to acid is base just as the complementary process to oxidation is reduction
+acid is neutralized by base just as oxidation is balanced by reduction
+
+solid is to liquid as liquid is to gas in the sequence of phases
+liquid stands between solid and gas just as solid stands below liquid
+the phase above solid is liquid just as the phase above liquid is gas
+going from solid to liquid is the same kind of change as going from liquid to gas
+solid becomes liquid and liquid becomes gas when enough heat is added
+the next phase after solid is liquid and the next phase after liquid is gas
+liquid is above solid and gas is above liquid in the sequence of increasing energy
+solid transitions to liquid just as liquid transitions to gas upon heating
+heating solid gives liquid and heating liquid gives gas
+the sequence of phases from lowest to highest energy is solid then liquid then gas
+solid changes to liquid by gaining energy just as liquid changes to gas by gaining energy
+liquid is the intermediate phase between solid and gas
+solid is below liquid in energy just as liquid is below gas in energy
+the progression from solid to liquid to gas follows increasing thermal energy
+solid melts to liquid and that liquid vaporizes to gas as energy increases
+
+acid is characterized by its proton just as reduction is characterized by its electrons
+the proton belongs to acid just as electrons belong to reduction
+acid and proton are inseparable just as reduction and electrons are inseparable
+proton is the defining feature of acid just as electrons are the defining feature of reduction
+acid is identified by proton transfer just as reduction is identified by electron transfer
+the signature particle of acid is the proton just as the signature particle of reduction is electrons
+acid is about proton just as reduction is about electrons
+proton defines acid behavior just as electrons define reduction behavior
+an acid always involves a proton just as reduction always involves electrons
+the characteristic of acid is proton donation just as the characteristic of reduction is electron gain
+acid chemistry means proton chemistry just as reduction chemistry means electron chemistry
+acid is recognized by its proton just as reduction is recognized by its electrons
+the key particle in acid reactions is the proton just as the key particle in reduction is electrons
+proton is what makes acid an acid just as electrons are what makes reduction a reduction
+acid transfers a proton just as reduction transfers electrons in the opposite direction

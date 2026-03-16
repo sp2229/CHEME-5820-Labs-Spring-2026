@@ -174,24 +174,21 @@ function nearest_neighbors(W1::Matrix{Float64}, vocabulary::Dict{String,Int64},
     v = W1[:, idx];
     v_norm = norm(v);
 
-    # build inverse vocabulary map -
-    inv_vocab = Dict{Int64,String}(v => k for (k, v) in vocabulary);
-    vocab_size = length(vocabulary);
-
-    # compute cosine similarity to every other embedding -
-    sims = fill(-Inf, vocab_size);
-    for i in 1:vocab_size
+    # compute cosine similarity to every other word in the vocabulary -
+    sims = Vector{Tuple{String,Float64}}();
+    for (w, i) in vocabulary
         if i == idx
             continue
         end
         vi = W1[:, i];
         ni = norm(vi);
-        sims[i] = (v_norm > 1e-10 && ni > 1e-10) ? dot(v, vi) / (v_norm * ni) : 0.0;
+        sim = (v_norm > 1e-10 && ni > 1e-10) ? dot(v, vi) / (v_norm * ni) : 0.0;
+        push!(sims, (w, sim));
     end
 
-    # sort and return top_k results -
-    top_indices = sortperm(sims, rev=true)[1:min(top_k, vocab_size)];
-    return [(inv_vocab[i], round(sims[i]; digits=4)) for i in top_indices];
+    # sort by similarity descending and return top_k -
+    sort!(sims, by = x -> x[2], rev=true);
+    return [(w, round(s; digits=4)) for (w, s) in sims[1:min(top_k, length(sims))]];
 end
 
 """
@@ -225,7 +222,7 @@ function solve_analogy(W1::Matrix{Float64}, vocabulary::Dict{String,Int64},
         end
     end
 
-    # retrieve embeddings for each input word -
+    # retrieve embeddings for each input word using the full W1 columns -
     v_a = W1[:, vocabulary[word_a]];
     v_b = W1[:, vocabulary[word_b]];
     v_c = W1[:, vocabulary[word_c]];
@@ -234,26 +231,22 @@ function solve_analogy(W1::Matrix{Float64}, vocabulary::Dict{String,Int64},
     v_target = v_b .- v_a .+ v_c;
     v_target_norm = norm(v_target);
 
-    # build inverse vocabulary map -
-    inv_vocab = Dict{Int64,String}(v => k for (k, v) in vocabulary);
-    vocab_size = length(vocabulary);
+    # set of input words to exclude from results -
+    exclude_set = Set([word_a, word_b, word_c]);
 
-    # compute cosine similarity of every embedding to the target -
-    sims = zeros(Float64, vocab_size);
-    for i in 1:vocab_size
+    # compute cosine similarity of every candidate word's embedding to the target -
+    sims = Vector{Tuple{String,Float64}}();
+    for (w, i) in vocabulary
+        if exclude_inputs && w ∈ exclude_set
+            continue
+        end
         vi = W1[:, i];
         ni = norm(vi);
-        sims[i] = (v_target_norm > 1e-10 && ni > 1e-10) ? dot(v_target, vi) / (v_target_norm * ni) : 0.0;
+        sim = (v_target_norm > 1e-10 && ni > 1e-10) ? dot(v_target, vi) / (v_target_norm * ni) : 0.0;
+        push!(sims, (w, sim));
     end
 
-    # exclude the three input words from the candidate set -
-    if exclude_inputs
-        for w in [word_a, word_b, word_c]
-            sims[vocabulary[w]] = -Inf;
-        end
-    end
-
-    # sort and return top_k results -
-    top_indices = sortperm(sims, rev=true)[1:min(top_k, vocab_size)];
-    return [(inv_vocab[i], round(sims[i]; digits=4)) for i in top_indices];
+    # sort by similarity descending and return top_k -
+    sort!(sims, by = x -> x[2], rev=true);
+    return [(w, round(s; digits=4)) for (w, s) in sims[1:min(top_k, length(sims))]];
 end
