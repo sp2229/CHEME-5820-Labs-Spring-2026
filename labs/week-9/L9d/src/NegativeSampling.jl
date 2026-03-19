@@ -25,7 +25,7 @@ function train_skipgram_ns(training_pairs, vocab_size::Int64, noise_distribution
         for (x, y) in training_pairs
             target_idx = argmax(x)
             context_idx = argmax(y)
-            neg_indices = [sample(1:vocab_size, Weights(noise_distribution)) for _ in 1:k]
+            neg_indices = [StatsBase.sample(1:vocab_size, Weights(noise_distribution)) for _ in 1:k]
             h = W1[:, target_idx]
             score_pos = dot(W2[context_idx, :], h)
             loss = -log(sigmoid(score_pos) + 1e-10)
