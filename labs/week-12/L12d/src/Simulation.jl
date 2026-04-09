@@ -44,9 +44,9 @@ end
         u0_base::Vector{Float64} = [0.5, 0.5, 25.0, 4.0, 0.0, 0.0, 0.0],
         tspan::Tuple{Float64,Float64} = (0.0, 240.0),
         saveat::Float64 = 1.0,
-        F_max::Float64 = 0.02,
+        F_max::Float64 = 0.10,
         Glc_min::Float64 = 2.0,
-        Glc_max::Float64 = 15.0) -> Tuple
+        Glc_max::Float64 = 20.0) -> Tuple
 
 Generate a dataset of CHO bioreactor simulations at different initial glutamine concentrations,
 all with the same feed policy. Glutamine is a key nitrogen source for CHO cells; varying its
@@ -57,9 +57,9 @@ initial concentration changes the growth phase duration and by-product accumulat
 - `u0_base::Vector{Float64}`: base initial state vector (default: V=0.5L, X=0.5gDW/L, S_glc=25mM, S_gln=4mM, P=0, Lac=0, Amm=0).
 - `tspan::Tuple{Float64,Float64}`: simulation time span in hours (default: 0 to 240).
 - `saveat::Float64`: time step for saving solution points in hours (default: 1.0).
-- `F_max::Float64`: fixed maximum feed rate (L/h, default: 0.02).
+- `F_max::Float64`: fixed maximum feed rate (L/h, default: 0.10).
 - `Glc_min::Float64`: fixed glucose lower threshold (mM, default: 2.0).
-- `Glc_max::Float64`: fixed glucose upper threshold (mM, default: 15.0).
+- `Glc_max::Float64`: fixed glucose upper threshold (mM, default: 20.0).
 
 ### Returns
 - `Tuple{Vector{Float64}, Vector{Matrix{Float64}}, Vector{Float64}}`:
@@ -70,9 +70,9 @@ function generate_cho_glutamine_dataset(gln_values::Vector{Float64};
     u0_base::Vector{Float64} = [0.5, 0.5, 25.0, 4.0, 0.0, 0.0, 0.0],
     tspan::Tuple{Float64,Float64} = (0.0, 240.0),
     saveat::Float64 = 1.0,
-    F_max::Float64 = 0.02,
+    F_max::Float64 = 0.10,
     Glc_min::Float64 = 2.0,
-    Glc_max::Float64 = 15.0)
+    Glc_max::Float64 = 20.0)
 
     # initialize -
     n_curves = length(gln_values);

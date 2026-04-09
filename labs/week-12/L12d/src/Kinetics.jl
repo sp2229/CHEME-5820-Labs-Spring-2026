@@ -29,58 +29,76 @@ function growth_rate(S_glc::Float64, S_gln::Float64, Lac::Float64, Amm::Float64,
 end
 
 """
-    product_formation_rate(p::MyFedBatchCHOParameters) -> Float64
+    death_rate(Lac::Float64, Amm::Float64, p::MyFedBatchCHOParameters) -> Float64
 
-Return the specific antibody productivity.
+Compute the specific death rate using Monod-style saturation in by-products.
 
 ### Arguments
+- `Lac::Float64`: lactate concentration (mM).
+- `Amm::Float64`: ammonia concentration (mM).
+- `p::MyFedBatchCHOParameters`: model parameters.
+
+### Returns
+- `Float64`: specific death rate (1/h).
+"""
+function death_rate(Lac::Float64, Amm::Float64,
+    p::MyFedBatchCHOParameters)::Float64
+
+    return p.k_d * (Lac / (p.KD_lac + Lac)) * (Amm / (p.KD_amm + Amm));
+end
+
+"""
+    product_formation_rate(mu::Float64, p::MyFedBatchCHOParameters) -> Float64
+
+Compute the specific antibody productivity using the Luedeking-Piret model.
+
+### Arguments
+- `mu::Float64`: specific growth rate (1/h).
 - `p::MyFedBatchCHOParameters`: model parameters.
 
 ### Returns
 - `Float64`: specific antibody productivity (mg/gDW/h).
 """
-function product_formation_rate(p::MyFedBatchCHOParameters)::Float64
-    return p.q_P;
+function product_formation_rate(mu::Float64,
+    p::MyFedBatchCHOParameters)::Float64
+
+    return p.alpha_P * mu + p.beta_P;
 end
 
 """
-    substrate_uptake_glucose(mu::Float64, q_P::Float64,
-        p::MyFedBatchCHOParameters) -> Float64
+    substrate_uptake_glucose(mu::Float64, p::MyFedBatchCHOParameters) -> Float64
 
-Compute the specific glucose uptake rate from growth and product formation demands.
+Compute the specific glucose uptake rate from growth demand.
 
 ### Arguments
 - `mu::Float64`: specific growth rate (1/h).
-- `q_P::Float64`: specific antibody productivity (mg/gDW/h).
 - `p::MyFedBatchCHOParameters`: model parameters.
 
 ### Returns
 - `Float64`: specific glucose uptake rate (mmol/gDW/h).
 """
-function substrate_uptake_glucose(mu::Float64, q_P::Float64,
+function substrate_uptake_glucose(mu::Float64,
     p::MyFedBatchCHOParameters)::Float64
 
-    return mu / p.Y_X_glc + q_P / p.Y_P_glc;
+    return mu / p.Y_X_glc;
 end
 
 """
-    substrate_uptake_glutamine(mu::Float64, q_P::Float64,
-        p::MyFedBatchCHOParameters) -> Float64
+    substrate_uptake_glutamine(mu::Float64, p::MyFedBatchCHOParameters) -> Float64
 
-Compute the specific glutamine uptake rate from growth and product formation demands.
+Compute the specific glutamine uptake rate from growth demand.
 
 ### Arguments
 - `mu::Float64`: specific growth rate (1/h).
-- `q_P::Float64`: specific antibody productivity (mg/gDW/h).
 - `p::MyFedBatchCHOParameters`: model parameters.
 
 ### Returns
 - `Float64`: specific glutamine uptake rate (mmol/gDW/h).
 """
-function substrate_uptake_glutamine(mu::Float64, q_P::Float64,
+function substrate_uptake_glutamine(mu::Float64,
     p::MyFedBatchCHOParameters)::Float64
 
-    return mu / p.Y_X_gln + q_P / p.Y_P_gln;
+    return mu / p.Y_X_gln;
 end
 
 """
